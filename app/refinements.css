@@ -1,0 +1,75 @@
+/* Self-hosted type, locale-specific rhythm, and the language control. */
+:root { --font: 'Noto Sans Bengali', Arial, sans-serif; }
+body { font-family: var(--font); }
+h1, h2, h3 { font-family: var(--font); }
+.button span, .course-level, .skills-grid article > div, .faq-list summary::after { font-family: var(--font); }
+.course-level > span, .footer-signoff > span:first-child { font-family: var(--font); }
+.wordmark { font-family: Arial, sans-serif; }
+.nav { gap: 24px; }
+.nav nav { margin-left: auto; gap: 25px; order: 1; }
+.nav > .brand { order: 0; flex-shrink: 0; }
+.language-switcher { order: 2; display: flex; flex-shrink: 0; align-items: center; border: 1px solid #dce2d5; border-radius: 7px; padding: 3px; gap: 2px; background: #f8faf5; }
+.language-switcher a { display: grid; place-items: center; min-width: 39px; min-height: 34px; font-size: 12px; font-weight: 600; padding: 3px 7px; border-radius: 4px; color: var(--muted); }
+.language-switcher a[aria-current='page'] { background: var(--green); color: white; }
+.nav-cta { order: 3; white-space: nowrap; }
+.menu-toggle { order: 4; }
+.official-logo { width: 140px; height: 64px; object-fit: contain; }
+.skip-link { position: fixed; top: -100px; left: 20px; z-index: 100; background: var(--green); color: white; padding: 12px 20px; border-radius: 6px; }
+.skip-link:focus { top: 15px; }
+html[lang='en'] h1, html[lang='en'] h2, html[lang='en'] h3 { letter-spacing: -.035em; }
+html[lang='en'] h1.english-hero-title { font-size: clamp(42px, 4.5vw, 62px); line-height: 1.15; font-weight: 600; }
+html[lang='en'] h2 { font-size: 38px; line-height: 1.25; }
+html[lang='en'] h3 { line-height: 1.3; }
+html[lang='en'] .hero-copy > p { font-size: 16px; line-height: 1.8; }
+html[lang='en'] .hero-note { font-size: 10px; gap: 7px; flex-wrap: wrap; }
+html[lang='en'] .nav nav { font-size: 13px; gap: 24px; }
+html[lang='en'] .actions { gap: 18px; flex-wrap: wrap; }
+html[lang='en'] .actions .button { font-size: 14px; padding: 14px 20px; gap: 20px; }
+html[lang='en'] .actions .text-link { font-size: 13px; }
+html[lang='en'] .course-body h3 { font-size: 22px; min-height: 58px; }
+html[lang='en'] .course-body > p { min-height: 76px; }
+html[lang='en'] .course-meta { flex-wrap: wrap; }
+html[lang='en'] .benefits h3 { font-size: 20px; }
+html[lang='en'] .steps h3 { font-size: 21px; }
+html[lang='en'] .image-card h3 { font-size: 25px; }
+html[lang='en'] .skills-grid h3 { font-size: 23px; }
+html[lang='en'] .level-box h2 { font-size: 33px; }
+html[lang='en'] .level-options > button { font-size: 14px; }
+html[lang='en'] .trial-grid h2 { font-size: 48px; }
+html[lang='en'] .faq-list summary { font-size: 16px; }
+html[lang='en'] .contact-note { font-size: 13px; }
+@media (max-width: 1100px) {
+  .nav { gap: 15px; }
+  .nav nav, html[lang='en'] .nav nav { gap: 17px; font-size: 12px; }
+  html[lang='en'] h2 { font-size: 34px; }
+  html[lang='en'] .hero-bottom > div { font-size: 13px; }
+}
+@media (max-width: 800px) {
+  .language-switcher { margin-left: auto; }
+  .menu-toggle { margin-left: 0; }
+  .nav nav { margin-left: 0; }
+  .nav nav.open, html[lang='en'] .nav nav.open { gap: 0; font-size: 16px; }
+  .nav nav a { padding: 10px 0; }
+  html[lang='en'] h2 { font-size: 31px; }
+  html[lang='en'] .image-card h3 { font-size: 20px; }
+  html[lang='en'] .course-body h3 { font-size: 19px; }
+  html[lang='en'] .floating-note strong { font-size: 12px; }
+}
+@media (max-width: 600px) {
+  .nav { gap: 12px; }
+  .nav-cta { display: none; }
+  .language-switcher a { min-width: 42px; min-height: 36px; }
+  .menu-toggle { min-width: 40px; min-height: 44px; padding: 4px; }
+  .official-logo { width: 105px; height: 55px; }
+  h1 { font-size: 45px; line-height: 1.3; }
+  html[lang='en'] h1.english-hero-title { font-size: clamp(39px, 10.3vw, 56px); }
+  html[lang='en'] h2 { font-size: 32px; }
+  html[lang='en'] .hero-bottom > div { font-size: 12px; }
+  html[lang='en'] .hero-bottom i { margin: 0 8px; }
+  html[lang='en'] .image-card h3 { font-size: 25px; }
+  html[lang='en'] .course-body h3 { font-size: 23px; min-height: 0; }
+  html[lang='en'] .course-body > p { min-height: 0; }
+  html[lang='en'] .trial-grid h2 { font-size: 42px; }
+  html[lang='en'] .skills-grid h3 { font-size: 20px; }
+  html[lang='en'] .level-box h2 { font-size: 28px; }
+}
