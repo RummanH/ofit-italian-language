@@ -1,4 +1,4 @@
-# OFIB — bilingual Next.js website
+﻿# OFIB â€” bilingual Next.js website
 
 The original twelve-section design, rebuilt with the Next.js App Router, React, and TypeScript. Warm ivory, forest green, coral accents, photography, and responsive layouts are retained.
 
@@ -19,7 +19,7 @@ npm start
 
 ## Fonts and branding
 
-- Noto Sans Bengali, including Latin glyphs and weights 400–700, is bundled locally via Fontsource. The site does not depend on Google Fonts requests.
+- DM Sans handles English body text, Manrope handles English headings and the wordmark, and Hind Siliguri handles Bengali text. All three are bundled locally via Fontsource; the site does not depend on Google Fonts requests.
 - **The official OFIB logo has not been obtained.** The existing text wordmark remains a temporary fallback, not a verified logo. Add the official asset under `public/brand/` and set `logoSrc` in `lib/brand.ts`. Header and footer share the same brand component.
 - Images are illustrative Unsplash photographs; they do not depict OFIB's actual staff or students. External image delivery requires an internet connection.
 
@@ -33,12 +33,5 @@ The contact form only creates a local draft: it does not send or store informati
 
 The original vanilla files are kept in `design-reference/` for comparison.
 
-## Browser checks
+The production build and TypeScript checks passed locally. Vercel logs shared so far show the build environment and repository checkout only; share later output if the deployment fails.
 
-With the app running on port 3000:
-
-```sh
-npm test
-```
-
-The Playwright test checks both languages, remembered preferences, course filtering, course recommendations, inquiry drafts, FAQs, mobile navigation, and overflow at five viewport widths. Screenshots are saved in `test-results/`. A Playwright Chromium installation is required (`npx playwright install chromium` if not already present). Set `TEST_BASE_URL` to test another local port.

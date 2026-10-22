@@ -1,11 +1,19 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import '@fontsource/noto-sans-bengali/400.css';
-import '@fontsource/noto-sans-bengali/500.css';
-import '@fontsource/noto-sans-bengali/600.css';
-import '@fontsource/noto-sans-bengali/700.css';
+import '@fontsource-variable/dm-sans';
+import '@fontsource-variable/manrope';
+import '@fontsource/hind-siliguri/400.css';
+import '@fontsource/hind-siliguri/500.css';
+import '@fontsource/hind-siliguri/600.css';
+import '@fontsource/hind-siliguri/700.css';
 import '../globals.css';
 import '../refinements.css';
+import '../premium.css';
+import '../golden.css';
+import '../lesson.css';
+import '../marquee.css';
+import '../footer.css';
+import '../typography.css';
 import { isLocale } from '@/lib/i18n';
 
 export const dynamicParams = false;
